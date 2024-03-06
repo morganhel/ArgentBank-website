@@ -42,6 +42,39 @@ body {
   white-space: nowrap !important; /* 3 */
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+.nav__logo--image {
+  max-width: 100%;
+  width: 200px;
+}
+.nav__item {
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+.nav__item:hover {
+  text-decoration: underline;
+}
+.nav__item--logout {
+  border: none;
+  background: none;
+  font-weight: bold;
+  color: #2c3e50;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .feature {
   flex: 1;
   padding: 2.5rem;

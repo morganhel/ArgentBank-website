@@ -5,6 +5,7 @@ import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from "react-redux";
 import { setLogin, setToken, setUser } from "../../redux/actions/user.action";
+import '../../index.css'
 
 function Header() {
 
@@ -25,7 +26,7 @@ function Header() {
 
     if (isLogged === false) {
         logOption = (
-            <NavLink to="/sign-in" className="main-nav-item">
+            <NavLink to="/sign-in" className="nav__item">
                 <FontAwesomeIcon icon={faCircleUser} />
                 Sign In
             </NavLink>
@@ -35,12 +36,12 @@ function Header() {
     if (isLogged === true) {
         logOption = (
             <div>
-                <NavLink to="/sign-in" className="main-nav-item">
+                <NavLink to="/sign-in" className="nav__item">
                 <FontAwesomeIcon icon={faCircleUser} />
-                    <span className="main-nav-name">{userName}</span>
+                {userName}
                 </NavLink>
                 <NavLink to="/">
-                    <button className="main-nav-item btn-logout" onClick={logout}>
+                    <button className="nav__item--logout" onClick={logout}>
                         <FontAwesomeIcon icon={faRightFromBracket} />
                         Logout
                     </button>
@@ -50,10 +51,10 @@ function Header() {
     }
     return (
         <header>
-            <nav className="main-nav">
-                <NavLink to="/" className="main-nav-logo">
+            <nav className="nav">
+                <NavLink to="/" className="nav__logo">
                     <img
-                        className="main-nav-logo-image"
+                        className="nav__logo--image"
                         src={Logo}
                         alt="Argent Bank Logo"
                     />
