@@ -167,12 +167,12 @@ body {
   gap: 15px;
 }
 .formEditName__buttons button {
-  border-radius: 5px;
-  padding: 15px 25px;
-  color: #fff;
   border-color: #00bc77;
   background-color: #00bc77;
+  color: #fff;
   font-weight: bold;
+  border-radius: 5px;
+  padding: 15px 25px;
   text-decoration: none;
 }
 
@@ -249,15 +249,15 @@ body {
   font-size: 5rem;
 }
 .signIn__button {
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+  font-weight: bold;
   display: block;
   width: 100%;
   padding: 8px;
   font-size: 1.1rem;
-  font-weight: bold;
   margin-top: 1rem;
-  border-color: #00bc77;
-  background-color: #00bc77;
-  color: #fff;
 }
 .signIn__inputWrapper {
   display: flex;
@@ -307,7 +307,7 @@ body {
 .error__text {
   font-size: 3rem;
   font-weight: bold;
-  color: white;
+  color: #fff;
 }
 .error__button {
   text-decoration: none;

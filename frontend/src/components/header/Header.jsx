@@ -5,7 +5,6 @@ import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from "react-redux";
 import { setLogin, setToken, setUser } from "../../redux/actions/user.action";
-import '../../index.css'
 
 function Header() {
 

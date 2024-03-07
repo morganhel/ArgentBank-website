@@ -5,28 +5,30 @@ import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../../redux/actions/user.action";
 
 export default function EditName({ setEdit }) {
-    const [username, getUsernameChange] = useState("");
+    const [username, getUsernameChange] = useState(""); //initialisation du state de username à ""
 
     const dispatch = useDispatch();
 
+    //on récupère les infos dans le store redux
     const token = useSelector((state) => state.user.token);
     const userName = useSelector((state) => state.user.dataUser.userName);
     const firstName = useSelector((state) => state.user.dataUser.firstName);
     const lastName = useSelector((state) => state.user.dataUser.lastName);
 
+    //fonction pour la soumission du formulaire d'édition
     async function onSave(e) {
         e.preventDefault();
         try {
-            const response = await userEditProfile(token, username);
-            console.log(response);
-            if (response.status === 200) {
-                dispatch(setUser(response.body));
-                setEdit(false);
+            const response = await userEditProfile(token, username); //appel de la fonction userEditProfile avec le token de sécurité et le nouveau username
+            if (response.status === 200) { //si ok 
+                dispatch(setUser(response.body)); //on change le userName dans le store avec l'action setUser
+                setEdit(false); //on repasse l'état de setEdit à false pour fermer le formulaire d'édition
             }
         } catch (error) {
             console.log(error);
         }
     }
+    //fonction pour femer le formulaire d'édition
     function cancel(e) {
         e.preventDefault();
         setEdit(false);

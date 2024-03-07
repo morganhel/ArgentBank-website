@@ -8,7 +8,6 @@ import Error from './pages/error';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import './index.css';
-import '../src/assets/style/index.css';
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from './redux/store';

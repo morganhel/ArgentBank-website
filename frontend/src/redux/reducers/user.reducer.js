@@ -1,13 +1,13 @@
 import { SET_LOGIN, SET_TOKEN, SET_USER } from "../actions/user.action";
 
-// Etat initial du reducer
+// Etat initial
 const initialState = {
     dataUser: "",
     token: null,
     isLogin: false,
 };
 
-// Définir le reducer
+// Modification du state en fonction de l'action
 const userReducer = (state = initialState, action) => {
     switch (action.type) {
         // Si l'action est de type SET_TOKEN
