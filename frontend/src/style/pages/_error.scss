@@ -1,0 +1,24 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+
+    &__title {
+        font-size: 10rem;
+        font-weight: bold;
+        color: #00bc77;
+        margin: 0;
+    }
+
+    &__text {
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    &__button {
+        text-decoration: none;
+    }
+}

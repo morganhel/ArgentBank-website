@@ -145,6 +145,37 @@ body {
   }
 }
 
+.formEditName {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+  margin: auto;
+}
+.formEditName__input {
+  margin: 7px;
+}
+.formEditName__input label {
+  margin-right: 10px;
+}
+.formEditName__input input {
+  border-radius: 5px;
+}
+.formEditName__buttons {
+  margin: 15px;
+  display: flex;
+  gap: 15px;
+}
+.formEditName__buttons button {
+  border-radius: 5px;
+  padding: 15px 25px;
+  color: #fff;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .feature {
   flex: 1;
   padding: 2.5rem;
@@ -258,4 +289,26 @@ body {
   color: #fff;
   font-weight: bold;
   padding: 10px;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+.error__title {
+  font-size: 10rem;
+  font-weight: bold;
+  color: #00bc77;
+  margin: 0;
+}
+.error__text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+.error__button {
+  text-decoration: none;
 }/*# sourceMappingURL=index.css.map */

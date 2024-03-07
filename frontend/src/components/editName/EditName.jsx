@@ -33,9 +33,9 @@ export default function EditName({ setEdit }) {
     }
 
     return (
-        <form className="form-edit">
+        <form className="formEditName">
             <h2>Edit user info</h2>
-            <div className="input-edit">
+            <div className="formEditName__input">
                 <label htmlFor="username">User name :</label>
                 <input
                     type="text"
@@ -45,15 +45,15 @@ export default function EditName({ setEdit }) {
                     placeholder={userName}
                 />
             </div>
-            <div className="input-edit">
+            <div className="formEditName__input">
                 <label htmlFor="firstname">First name :</label>
                 <input type="text" id="firstname" disabled placeholder={firstName} />
             </div>
-            <div className="input-edit">
+            <div className="formEditName__input">
                 <label htmlFor="lastname">Last name :</label>
                 <input type="text" id="lastname" disabled placeholder={lastName} />
             </div>
-            <div className="btn-edit">
+            <div className="formEditName__buttons">
                 <button onClick={onSave}>Save</button>
                 <button onClick={cancel}>Cancel</button>
             </div>

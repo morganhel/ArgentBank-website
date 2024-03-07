@@ -1,0 +1,35 @@
+.formEditName {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    margin: auto;
+
+    &__input {
+        margin: 7px;
+
+        label {
+            margin-right: 10px;
+        }
+
+        input {
+            border-radius: 5px;
+        }
+    }
+
+    &__buttons {
+        margin: 15px;
+        display: flex;
+        gap: 15px;
+
+        button {
+            border-radius: 5px;
+            padding: 15px 25px;
+            color: #fff;
+            border-color: #00bc77;
+            background-color: #00bc77;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}
