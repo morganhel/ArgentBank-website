@@ -23,12 +23,9 @@
         gap: 15px;
 
         button {
+            @include button;
             border-radius: 5px;
             padding: 15px 25px;
-            color: #fff;
-            border-color: #00bc77;
-            background-color: #00bc77;
-            font-weight: bold;
             text-decoration: none;
         }
     }
