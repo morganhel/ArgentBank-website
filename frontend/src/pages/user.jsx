@@ -10,17 +10,17 @@ function User() {
 
     return (
     <main className="main bg-dark">
-        <div className="header">
+        <div className="user">
             {edit ? (
                     <EditName setEdit={setEdit} />
                 ) : (
                     <>
                         <h1>
-                            Welcom back
+                            Welcome back
                             <br />
                             {userName}!
                         </h1>
-                        <button className="edit-button" onClick={() => setEdit(true)}>
+                        <button className="user__button" onClick={() => setEdit(true)}>
                             Edit Name
                         </button>
                     </>

@@ -61,44 +61,44 @@ function SignIn() {
 
     return (
         <main className="main bg-dark">
-            <section className="sign-in-content">
-                <FontAwesomeIcon icon={faCircleUser} />
+            <section className="signIn">
+                <FontAwesomeIcon icon={faCircleUser} className='signIn__icon'/>
                 <h1>Sign In</h1>
                 <form onSubmit={handleSubmit}>
-            <div className="input-wrapper">
-                <label htmlFor="email">Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-            </div>
-            <div className="input-wrapper">
-                <label htmlFor="password">Password</label>
-                <input
-                    type="password"
-                    id="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-            </div>
-            <div className="input-remember">
-                <input
-                    type="checkbox"
-                    id="remember-me"
-                    checked={rememberMe}
-                    onChange={(e) => setRememberMe(e.target.checked)}
-                />
-                <label htmlFor="remember-me">Remember me</label>
-            </div>
-            <button type="submit" className="sign-in-button">
-                Sign in
-            </button>
-            {errorMessage}
-        </form>
+                    <div className="signIn__inputWrapper">
+                        <label htmlFor="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="signIn__inputWrapper">
+                        <label htmlFor="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="signIn__inputRemember">
+                        <input
+                            type="checkbox"
+                            id="remember-me"
+                            checked={rememberMe}
+                            onChange={(e) => setRememberMe(e.target.checked)}
+                        />
+                        <label htmlFor="remember-me">Remember me</label>
+                    </div>
+                    <button type="submit" className="signIn__button">
+                        Sign in
+                    </button>
+                    {errorMessage}
+                </form>
             </section>
         </main>
     )

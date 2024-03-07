@@ -86,6 +86,65 @@ body {
   padding: 0;
 }
 
+.account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+@media (min-width: 720px) {
+  .account {
+    flex-direction: row;
+  }
+}
+.account__content {
+  width: 100%;
+  flex: 1;
+}
+@media (min-width: 720px) {
+  .account__content.cta {
+    flex: 0;
+  }
+}
+.account__content--title {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.account__content--amount {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.account__content--description {
+  margin: 0;
+}
+.account__content--button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+}
+@media (min-width: 720px) {
+  .account__content--button {
+    width: 200px;
+  }
+}
+
 .feature {
   flex: 1;
   padding: 2.5rem;
@@ -145,4 +204,58 @@ body {
   .features {
     flex-direction: row;
   }
+}
+
+.signIn {
+  box-sizing: border-box;
+  background-color: white;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+.signIn__icon {
+  font-size: 5rem;
+}
+.signIn__button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+}
+.signIn__inputWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.signIn__inputWrapper label {
+  font-weight: bold;
+}
+.signIn__inputWrapper input {
+  padding: 5px;
+  font-size: 1.2rem;
+}
+.signIn__inputRemember {
+  display: flex;
+}
+.signIn__inputRemember label {
+  margin-left: 0.25rem;
+}
+
+.user {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.user__button {
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
 }/*# sourceMappingURL=index.css.map */
