@@ -1,4 +1,4 @@
-import Logo from '../../assets/img/argentBankLogo.png';
+import Logo from '../../assets/img/argentBankLogo.webp';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';

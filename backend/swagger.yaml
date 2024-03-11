@@ -206,7 +206,7 @@ paths:
           description: No transaction found with this ID
         '500':
           description: Internal Server Error
-
+#fin new
 securityDefinitions:
   Bearer:
     type: apiKey
@@ -262,6 +262,7 @@ definitions:
     properties:
       userName:
         type: string
+#new
   Account:
     type: array
     items:
