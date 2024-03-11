@@ -101,6 +101,112 @@ paths:
           description: Invalid Fields
         '500':
           description: Internal Server Error
+# new
+  /categories:
+    get: 
+      summary: Return all categories
+      description: API for get all the categories
+      responses:
+        '200':
+          description: Returns an array of all categories
+          schema:
+            $ref: '#definitions/Categories'
+        '500':
+          description: Internal Server Error
+  /accounts:
+    get:
+      security:
+        - Bearer: []
+      tags:
+        - Accounts
+      summary: Return all Accounts 
+      description: API for get all the user's accounts 
+      responses:
+        '200':
+          description: Returns an array of all accounts
+          schema:
+            $ref: '#/definitions/Account'
+        '401':
+          description: Not Authorized
+        '500':
+          description: Internal Server Error
+  /accounts/{accountid}/transactions:
+    get: 
+      security:
+        - Bearer: []
+      tags:
+        - Accounts
+      summary: Return all Transactions from account number 'accountid'
+      description: API for get all the account's transactions 
+      responses:
+        '200':
+          description: Returns an array of all transactions above account 
+          schema:
+            $ref: '#/definitions/Transactions' 
+        '401':
+          description: Not Authorized
+        '404':
+          description: No account found with this ID
+        '500':
+          description: Internal Server Error
+  
+  /accounts/{accountid}/transactions/{transactionid}/category:
+    patch:
+      security:
+        - Bearer: []
+      tags:
+        - Accounts
+      summary: transaction's category
+      description: API for update transaction's category with a select dropdown
+      parameters:
+        - in: body
+          name: body
+          description: Update transaction's category
+          required: true
+          schema:
+            $ref: '#/definitions/Category'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Transaction's category is succesfully update
+        '400':
+          description: Invalid Fields
+        '401':
+          description: Not Authorized
+        '404':
+          description: No transaction found with this ID
+        '500':
+          description: Internal Server Error
+  /accounts/{accountid}/transactions/{transactionid}/note:
+    patch:
+      security:
+        - Bearer: []
+      tags:
+        - Accounts
+      summary: transaction's note
+      description: API for create or update transaction's note
+      parameters:
+        - in: body
+          name: body
+          description: Update transaction's category
+          required: true
+          schema:
+            $ref: '#/definitions/Note'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Transaction's note is succesfully update
+        '400':
+          description: Invalid Fields
+        '401':
+          description: Not Authorized
+        '404':
+          description: No transaction found with this ID
+        '500':
+          description: Internal Server Error
+
 securityDefinitions:
   Bearer:
     type: apiKey
@@ -156,3 +262,86 @@ definitions:
     properties:
       userName:
         type: string
+  Account:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          description: Id of the account
+        title:
+          type: string
+          example: Name of the account
+        amount:
+          type: number
+          format: double
+          description: Amount on account
+        description:
+          type: string
+          example: type of account
+    minItems: 3
+  Transactions:
+    type: array
+    items: 
+      type: object
+      properties: 
+        id: 
+          type: integer
+          format: int64
+          description: Id of the transaction
+        date: 
+          type: date
+          description: date the transaction was made  
+        description:
+          type: string
+          description: location in wich the transaction was made
+        amount:
+          type: number
+          format: double
+          description : transaction amount
+        balance:
+          type: number
+          format: double
+          description : amount remaining in the account after the transaction
+        TransactionType:
+          type: string
+          description: Type of the transaction 
+        CategoryId:
+          type: object
+          properties: 
+            id:
+              type: integer
+              description : New Id of the category 
+        Note:
+          type: object
+          properties:
+            txt:
+              type: string
+              description: additional note for remember the transaction
+    minItems: 3
+  Categories:
+    type: array
+    items:
+      type: object
+      properties:
+          id:
+            type: integer
+            format: int64
+            description: Id of the category
+          name:
+            type: string
+            description : Label for the category
+  CategoryId: 
+    type: object
+    properties: 
+      id:
+        type: integer
+        description : New Id of the category 
+  Note:
+    type: object
+    properties:
+      txt:
+        type: string
+        description: Unpadated transaction's note 
