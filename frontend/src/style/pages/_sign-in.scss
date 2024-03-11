@@ -6,10 +6,6 @@
     margin-top: 3rem;
     padding: 2rem;
 
-    &__icon {
-        font-size: 5rem;
-    };
-
     &__button{
         @include button;
         display: block;

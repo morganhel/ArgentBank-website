@@ -42,7 +42,7 @@ function Header() {
                 <NavLink to="/">
                     <button className="nav__item--logout" onClick={logout}>
                         <FontAwesomeIcon icon={faRightFromBracket} />
-                        Logout
+                        Sign Out
                     </button>
                 </NavLink>
             </div>
