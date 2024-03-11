@@ -104,6 +104,8 @@ paths:
 # new
   /categories:
     get: 
+      tags:
+        - Categories
       summary: Return all categories
       description: API for get all the categories
       responses:
@@ -156,7 +158,7 @@ paths:
         - Bearer: []
       tags:
         - Accounts
-      summary: transaction's category
+      summary: Update the category of the transaction 
       description: API for update transaction's category with a select dropdown
       parameters:
         - in: body
@@ -184,7 +186,7 @@ paths:
         - Bearer: []
       tags:
         - Accounts
-      summary: transaction's note
+      summary: Update the note of the transaction 
       description: API for create or update transaction's note
       parameters:
         - in: body
