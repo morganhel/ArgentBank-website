@@ -35,7 +35,7 @@ function Header() {
     if (isLogged === true) { //si connecté 
         logOption = ( //le contenu est : 
             <div>
-                <NavLink to="/sign-in" className="nav__item">
+                <NavLink to="/user" className="nav__item">
                 <FontAwesomeIcon icon={faCircleUser} />
                 {userName}
                 </NavLink>

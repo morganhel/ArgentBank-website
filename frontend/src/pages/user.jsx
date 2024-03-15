@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
-import { NavLink } from 'react-router-dom';
 import EditName from "../components/editName/EditName";
 import Account from '../components/account/Account';
 import transactions from "../assets/data/transactions.json";

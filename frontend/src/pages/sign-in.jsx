@@ -32,8 +32,7 @@ function SignIn() {
                 const profile = await userProfile(response.body.token); //appel de la fonction userProfile 
                 const data = await profile.body; //récupération des données utilisateur 
                 dispatch(setUser(data)); //enregistrement des données utilisateurs dans le store avec l'action setUser
-                navigate("/user"); //chargement de la page user 
-
+                
                 if (rememberMe) { //si case rememberMe coché on stocke l'email et le mdp dans le localStorage et on passe l'état de rememberMe à true
                     localStorage.setItem("email", email);
                     localStorage.setItem("password", password);
@@ -43,6 +42,9 @@ function SignIn() {
                     localStorage.removeItem("password");
                     localStorage.setItem("rememberMe", "false");
                 }
+
+                navigate("/user"); //chargement de la page user 
+
             }
 
             if (response.status === 400) { //si connexion passe l'etat de errorLoginMessage à true et on recharge la page 

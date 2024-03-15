@@ -28,7 +28,7 @@ export default function EditName({ setEdit }) {
             console.log(error);
         }
     }
-    //fonction pour femer le formulaire d'édition
+    //fonction pour fermer le formulaire d'édition
     function cancel(e) {
         e.preventDefault();
         setEdit(false);
